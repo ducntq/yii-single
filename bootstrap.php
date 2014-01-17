@@ -1,4 +1,7 @@
 <?php
+
+define('DS', DIRECTORY_SEPARATOR);
+
 class ConfigLoader
 {
     /**
