@@ -6,6 +6,16 @@ Yii-single được tạo ra và chia sẻ với mục đích tạo một cấu 
 
 Bạn chỉ cần clone về, set lại đường dẫn trong ```index.php```, ```console.php``` và ```console-production.php``` là có thể bắt đầu sử dụng.
 
+#Chạy ConsoleCommand
+
+Về cơ bản, việc chạy command trên môi trường local không khác gì. Nhưng đối với môi trường production, để chạy command, bạn thêm biến môi trường vào trước câu lệnh ```ENV=production```. Ví dụ:
+
+```
+ENV=production php console.php test
+```
+
+Câu lệnh trên sẽ thực hiện ```TestCommand``` với ```actionIndex``` trên môi trường production.
+
 #Đóng gói
 
 Yii-single được đóng gói kèm các 3rd party plugin sau:
