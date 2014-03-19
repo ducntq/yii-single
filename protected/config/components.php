@@ -26,7 +26,7 @@ return array(
             'jquery.ajaxqueue.js' => false,
             'jquery.metadata.js' => false,
         ),
-        'coreScriptPosition' => CClientScript::POS_HEAD,
+        'coreScriptPosition' => CClientScript::POS_END,
         'packages' => require(__DIR__ . '/packages.php')
     ),
 
@@ -46,5 +46,9 @@ return array(
     // cache giả cho môi trường local
     'cache' => array(
         'class' => 'CDummyCache'
-    )
+    ),
+
+    'autoloader' => array(
+        'class' => 'application.extensions.gautoloader.EAutoloader'
+    ),
 );

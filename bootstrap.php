@@ -54,7 +54,7 @@ class ConfigLoader
         $envConfigPath = $this->_envConfigDir . DIRECTORY_SEPARATOR . $configName . '.php';
         if (is_file($envConfigPath)) {
             $envConfig = require($envConfigPath);
-            $config = array_merge_recursive($config, $envConfig);
+            $config = array_merge($config, $envConfig);
         }
         return $config;
     }
@@ -63,6 +63,6 @@ class ConfigLoader
     {
         if (defined('ENV_CONSOLE') && ENV_CONSOLE && !YII_DEBUG) return 'production';
         else if (defined('ENV_CONSOLE') && ENV_CONSOLE && YII_DEBUG) return 'local';
-        return (isset($_SERVER['2VOI_ENV']) && !empty($_SERVER['2VOI_ENV'])) ? $_SERVER['2VOI_ENV'] : 'local';
+        return (isset($_SERVER['ENV']) && !empty($_SERVER['ENV'])) ? $_SERVER['ENV'] : 'local';
     }
 }

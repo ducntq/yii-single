@@ -6,7 +6,7 @@ $configLoader = new ConfigLoader(__DIR__);
 define('SITE_BASE_PATH','application.assets');
 return array(
     'basePath' => __DIR__ . DIRECTORY_SEPARATOR . '..',
-    'name' => '2voi CMS',
+    'name' => 'Yii Single Application Barebones',
     'sourceLanguage' => 'en_US',
 
     // preloading 'log' component

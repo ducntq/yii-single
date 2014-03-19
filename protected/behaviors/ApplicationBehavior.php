@@ -3,6 +3,9 @@
 class ApplicationBehavior extends CBehavior {
     public function attach($owner)
     {
+        // register autoloader
+        include (Yii::getPathOfAlias('application.config.namespaces') . '.php');
+
         // nếu môi trường ko phải là console
         if (!defined('ENV_CONSOLE') || !ENV_CONSOLE) {
             $owner->attachEventHandler('onBeginRequest', array($this, 'prepareAssets'));
