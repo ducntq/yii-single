@@ -27,5 +27,6 @@ Yii-single được đóng gói kèm các 3rd party plugin sau:
 #Người đóng tác
 
 Đức Nguyễn:
-    + Vai trò: đóng góp chính, dẫn dắt.
-    + Email: ducntq@gmail.com
+
++ Vai trò: đóng góp chính, dẫn dắt.
++ Email: ducntq@gmail.com
